@@ -28,7 +28,7 @@ public class DemoGridBag extends JFrame {
 	JTextArea areaTexto2 = new JTextArea("AreaTexto2", 2, 2);
 
 	String nombres[] = {"Hierro", "Acero", "Cobre"};
-	JComboBox<String> cuadroCombinado = new JComboBox<String>(nombres);
+	JComboBox cuadroCombinado = new JComboBox(nombres);
 
 	JTextField campoTexto = new JTextField("CampoTexto");
 	JButton boton1 = new JButton("Botón 1");
