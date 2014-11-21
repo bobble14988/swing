@@ -6,67 +6,63 @@ import javax.swing.*;
 
 public class TestuEremuakGrid extends JFrame {
 
-  private Container contenedor;
-  private GridBagLayout esquema;
-  private GridBagConstraints restricciones;
+  private Container edukiontzia;
+  private GridBagLayout eskema;
+  private GridBagConstraints mugak;
 
- // configurar la GUI
+ // IGa konfiguratu
  public TestuEremuakGrid()
  {
 	super( "GridBagLayout");
 
-	contenedor = getContentPane();
-	esquema = new GridBagLayout();
+	edukiontzia = getContentPane();
+	eskema = new GridBagLayout();
 
-	contenedor.setLayout(esquema);
+	edukiontzia.setLayout(eskema);
 
-	// instanciar restricciones de GridBagLayout
-	restricciones = new GridBagConstraints();
+	// mugak ezartzeko objektua lortu
+	mugak = new GridBagConstraints();
 
-	// crear componentes de la GUI
+	// IG osagaiak sortu
 	JLabel izena = new JLabel("Sartu zure izena:");
 	JLabel mezua = new JLabel("Utzi zure mezua:");
 
-	JTextField izenaText = new JTextField();
+	JTextField izenaText = new JTextField(10);
 	JTextArea mezuaText = new JTextArea(4, 20);
+		
+	gehituOsagaia( izena, 0,1, 3, 1);
+	gehituOsagaia( izenaText, 0,4, 10,1);
 	
-		// weightx y weighty para areaTexto1 son 0: el valor predeterminado
-	// anchor para todos los componentes es CENTER: el valor predeterminado
-	restricciones.fill = GridBagConstraints.BOTH;
-	restricciones.insets = new Insets(10,10,10,10);  //top left bottom right
-	agregarComponente( izena, 0,1, 3, 1);
+	gehituOsagaia( mezua, 1,1,3,1);
 	
-	agregarComponente( izenaText, 0,4, 2,1);
-	
-	agregarComponente( mezua, 1,1,3,1);
-	restricciones.insets = new Insets(0,10,10,10);  
-	restricciones.weightx = 1; // puede hacerse más ancho
-	restricciones.weighty = 1;    // puede hacerse más largo
-	agregarComponente(mezuaText, 2,1,5,5);
+//	mugak.fill = GridBagConstraints.BOTH;
+//	mugak.weightx = 1;
+//	mugak.weighty = 1;
+//	mugak.insets = new Insets(10, 10, 10, 10);
+
+	gehituOsagaia(mezuaText, 2,1,5,5);
 
 
 
 	setSize(300,200);
 	setVisible(true);
 
- } // fin constructor
+ } // erakitzailea
 
- // método para establecer restricciones
- private void agregarComponente( Component componente,
-	int fila, int columna, int anchura, int altura)
+ // mugak ezartzeko metodo laguntzailea
+ private void gehituOsagaia( Component osagaia,
+	int errenkada, int zutabea, int zabalera, int altuera)
  {
 
-	// establecer gridx y gridy
-	restricciones.gridx = columna;
-	restricciones.gridy = fila;
+	mugak.gridx = zutabea;
+	mugak.gridy = errenkada;
 
-	// establecer gridwidth y gridheight
-	restricciones.gridwidth = anchura;
-	restricciones.gridheight = altura;
+	mugak.gridwidth = zabalera;
+	mugak.gridheight = altuera;
 
-	// establecer restricciones y agregar componente
-	esquema.setConstraints (componente, restricciones);
-	contenedor.add(componente);	
+	// mugak ezarri eta osagaiak edukiontzian sartu
+	eskema.setConstraints (osagaia, mugak);
+	edukiontzia.add(osagaia);	
  }
 
  public static void main(String args[])
@@ -76,3 +72,7 @@ public class TestuEremuakGrid extends JFrame {
  }
 
 }
+
+
+// 	mugak.insets = new Insets(10, 10, 10, 10);
+// mugak.fill = GridBagConstraints.HORIZONTAL;
