@@ -4,6 +4,20 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+/*  0    1     2      3      4      5      6
+ *  +--------------------------------------+
+    |    |     |      |      |      |      |
+ 1  +----+-----+------+------+------+------+
+    |    |Sartu zure izena:  | ............|
+ 2  +----+-----+------+------+------+------+
+    |    |Utzi zure mezua:   |      |      |
+ 3  +----+-----+------+------+------+------+
+    |    | .............................   |
+ 4  +----+-.............................   +
+    |    | .............................   |
+ 5  +----+-----+------+------+------+------+
+ 
+*/
 public class TestuEremuakGrid extends JFrame {
 
   private Container edukiontzia;
@@ -30,17 +44,17 @@ public class TestuEremuakGrid extends JFrame {
 	JTextField izenaText = new JTextField(10);
 	JTextArea mezuaText = new JTextArea(4, 20);
 		
-	gehituOsagaia( izena, 0,1, 3, 1);
-	gehituOsagaia( izenaText, 0,4, 10,1);
+	gehituOsagaia( izena, 1,1, 3, 1);
+	gehituOsagaia( izenaText, 1,4, 10,1);
 	
-	gehituOsagaia( mezua, 1,1,3,1);
+	gehituOsagaia( mezua, 2,1,3,1);
 	
 //	mugak.fill = GridBagConstraints.BOTH;
 //	mugak.weightx = 1;
 //	mugak.weighty = 1;
 //	mugak.insets = new Insets(10, 10, 10, 10);
 
-	gehituOsagaia(mezuaText, 2,1,5,5);
+	gehituOsagaia(mezuaText, 3,1,5,5);
 
 
 
