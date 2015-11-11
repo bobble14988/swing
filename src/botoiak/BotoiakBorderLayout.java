@@ -34,7 +34,6 @@ public class BotoiakBorderLayout extends JFrame {
 		jButton2.addActionListener(entzule);
 		jButton3.addActionListener(new ActionListener() {
 			
-			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("Anonymous class listener!");
 				
