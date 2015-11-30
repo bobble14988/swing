@@ -22,7 +22,7 @@ public class BotoiakBoxLayout extends JFrame {
 		
 		jButton3.setText("Ezeztatu");
 		
-		getContentPane().setLayout(new BoxLayout(getContentPane(),BoxLayout.Y_AXIS));
+		getContentPane().setLayout(new BoxLayout(getContentPane(),BoxLayout.X_AXIS));
 		getContentPane().add(jButton1);
 		getContentPane().add(jButton2);
 		getContentPane().add(jButton3);

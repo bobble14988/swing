@@ -22,7 +22,7 @@ public class BotoiakFlowLayout extends JFrame {
 		jButton3.setText("Ezeztatu");
 		
 		FlowLayout flow = new FlowLayout();
-		flow.setAlignment(FlowLayout.RIGHT);
+		// flow.setAlignment(FlowLayout.RIGHT);
 		getContentPane().setLayout(flow);
 		getContentPane().add(jButton1);
 		getContentPane().add(jButton2);

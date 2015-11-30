@@ -1,5 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.net.MalformedURLException;
+
 import javax.swing.*;
 
 /*
@@ -72,7 +74,8 @@ public class RadioButtonDemo extends JPanel
 
 
         //Put the radio buttons in a column in a panel.
-        JPanel radioPanel = new JPanel(new GridLayout(0, 1));
+        JPanel radioPanel = new JPanel(new GridLayout(0,1));
+        // radioPanel.setLayout(new BoxLayout(radioPanel, BoxLayout.Y_AXIS));
         radioPanel.add(birdButton);
         radioPanel.add(catButton);
         radioPanel.add(dogButton);
@@ -93,13 +96,17 @@ public class RadioButtonDemo extends JPanel
 
     /** Returns an ImageIcon, or null if the path was invalid. */
     protected static ImageIcon createImageIcon(String path) {
-        java.net.URL imgURL = RadioButtonDemo.class.getResource(path);
-        if (imgURL != null) {
+       java.net.URL imgURL = RadioButtonDemo.class.getResource(path);
+    	/* java.net.URL imgURL = null;
+		try {
+			imgURL = new java.net.URL("http://docs.oracle.com/javase/tutorial/uiswing/examples/components/ComboBoxDemoProject/src/components/images/Bird.gif");
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        */
             return new ImageIcon(imgURL);
-        } else {
-            System.err.println("Couldn't find file: " + path);
-            return null;
-        }
+        
     }
 
     /**

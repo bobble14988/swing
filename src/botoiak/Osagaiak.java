@@ -18,7 +18,6 @@ public class Osagaiak extends JFrame {
 		bOnartu.setText("Onartu");
 		bOnartu.addActionListener(new ActionListener() {
 			
-			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				JOptionPane.showMessageDialog(null,
 						"Kaixo " + tIzena.getText(), "Hey!",

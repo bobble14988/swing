@@ -41,17 +41,14 @@ class TestModel extends AbstractTableModel {
         return true;
     }
 
-    @Override
     public int getColumnCount() {
         return 3;
     }
 
-    @Override
     public int getRowCount() {
         return records.size();
     }
 
-    @Override
     public Object getValueAt(int row, int col) {
         if (col == 0) {
             return records.get(row).val;

@@ -17,7 +17,6 @@ public class TableTest extends JFrame {
         this.add(new JScrollPane(table));
         Action increase = new AbstractAction("+") {
 
-            @Override
             public void actionPerformed(ActionEvent e) {
                 JTable table = (JTable) e.getSource();
                 int row = Integer.valueOf(e.getActionCommand());
@@ -28,7 +27,6 @@ public class TableTest extends JFrame {
         ButtonColumn inc = new ButtonColumn(table, increase, 1);
         Action decrease = new AbstractAction("-") {
 
-            @Override
             public void actionPerformed(ActionEvent e) {
                 JTable table = (JTable) e.getSource();
                 int row = Integer.valueOf(e.getActionCommand());

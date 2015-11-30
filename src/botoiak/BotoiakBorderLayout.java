@@ -9,6 +9,9 @@ public class BotoiakBorderLayout extends JFrame {
 	private JButton jButton1 = new JButton();
 	private JButton jButton2 = new JButton();
 	private JButton jButton3 = new JButton();
+	private JButton jButton4 = new JButton();
+	private JButton jButton5 = new JButton();
+	
 
 	private Entzule entzule = new Entzule();
 	
@@ -22,9 +25,15 @@ public class BotoiakBorderLayout extends JFrame {
 		jButton2.setActionCommand("ac2");
 		
 		jButton3.setText("Ezeztatu");
+		
+		jButton4.setText("Iparra");
+		jButton5.setText("Hegoa");
+		
+		getContentPane().add(jButton4, BorderLayout.NORTH);
 		getContentPane().add(jButton3, BorderLayout.EAST);
 		getContentPane().add(jButton2, BorderLayout.CENTER);
 		getContentPane().add(jButton1, BorderLayout.WEST);
+		getContentPane().add(jButton5, BorderLayout.SOUTH);
 	
 
 	}
